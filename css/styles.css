@@ -1,0 +1,678 @@
+:root {
+  --primary-font: 'Roboto', sans-serif; /* main font on the page */
+  --logo-font: 'Raleway', sans-serif; /* font in logo */
+  --primary-color: #212121; /* main text color on the page headers */
+  --secondary-color: #757575; /* color for box descriptions and phone */
+  --dark-background-color: #2f303a; /* dark background color for header and footer */
+  --second-background-color: #f5f4fa; /* background color in nasz zesół section and portfolio project */
+  --logo-studio-color: #000000;
+  --span-logo-color: #2196f3; /* color for webstudio and hover */
+  --thirt-color: #ffffff; /*color for main headline and button text inside */
+  --forth-color: #eeeeee;
+  --social-icon-color: #afb1b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+.section {
+  padding: 94px 0;
+}
+
+.container {
+  /* all divs */
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+
+.card-icon {
+  padding: 25px 100px;
+  background-color: var(
+    --second-background-color
+  );
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+
+.header-border {
+  border-bottom: 1px solid #ececec;
+}
+
+.header .nav-container,
+.navigation {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+}
+
+.header-link,  /* header menu */
+.contact-link,
+.header-logo {
+  text-decoration: none;
+}
+
+.is-active:after {
+  content: "";
+  width:53px;
+  height:4px;
+  display: flex;
+  border-radius:2px;
+  background: #2196F3;
+  position: absolute;
+  top:76px;
+}
+
+.header-menu
+  > .header-menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.contact-list
+  > .header-contact-list:not(:last-child) {
+  margin-right: 40px;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+}
+
+.header-menu-item,  /* contact list in header with no bulletpoint */
+ .header-contact-list {
+  list-style: none;
+}
+
+.header-logo {
+  font-family: var(--logo-font);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.38;
+  justify-content: center;
+  margin-right: 93px;
+  color: var(--logo-studio-color);
+}
+
+.logo-first {
+  /*logo webstudio first blue part */
+  color: var(--span-logo-color);
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+.header-link:hover,
+.header-link:focus {
+ color: #2196f3;
+}
+
+.header-link {
+  /* header link to agencja portfolio kontakt */
+  font-weight: 500;
+  line-height: 1.17;
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+
+.contact-link {
+ color: var(--secondary-color);
+ fill: var(--secondary-color);
+ font-weight: 500;
+ line-height: 1.17;
+
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--span-logo-color);
+  fill: var(--span-logo-color);
+}
+
+
+.menu-icon {
+  margin-right: 5px;
+}
+
+
+
+
+.main-headline {
+  /* header main heading and button */
+  text-align: center;
+  align-items: center;
+  display: flex;
+  background-color: var(--dark-background-color);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/background-image.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  height: 600px;
+  padding: 94px 0;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.main-headline-item {
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--thirt-color);
+  margin-bottom: 30px;
+}
+
+.our-advantages {
+  display: flex;
+  gap: 30px;
+}
+
+.our-advantages-item {
+  list-style: none;
+}
+
+/* lorem ipsum headers */
+.advantages-name {
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+/*lorem ipsum paragraph description */
+.advantages-paragraph {
+  font-weight: 400;
+  line-height: 1.71;
+  color: var(--secondary-color);
+}
+
+.what-we-do-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.what-we-do-description {
+  position: relative;
+}
+
+.image-figcaption {
+  width: 370px;
+  height: 70px;
+  position: absolute;
+  color: var(--thirt-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-top: 28px;
+  bottom: 3px;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+
+.what-we-do-title {
+  /* czym sie zajmujemy title */
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+
+.what-we-do-box {
+  /* 3 images under czym sie zajmujemy */
+  list-style: none;
+}
+
+.what-we-do-boxes {
+  display: flex;
+  gap: 30px;
+}
+
+.our-team {
+  /* nasz zespól background color*/
+  background-color: var(
+    --second-background-color
+  );
+  list-style: none;
+  padding: 94px 0;
+}
+
+.our-team-header {
+  /* nasz zespół header */
+  color: var(--primary-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.our-team-header::first-letter {
+  text-transform: uppercase;
+}
+
+.our-team-card {
+  list-style: none;
+  display: flex;
+  max-width: 270px;
+  gap: 30px;
+  text-align: center;
+}
+
+.our-team-card-item {
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--thirt-color);
+}
+
+.our-team-card-content {
+  padding: 30px 0;
+}
+
+.our-team-name {
+  /*john doe name card */
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.17;
+  text-transform: capitalize;
+  padding-bottom: 10px;
+  letter-spacing: 0.03em;
+}
+
+.our-team-description {
+  /*john doe profession */
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.12;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+.social-items {
+  display: flex;
+  margin: 0px 32px;
+  padding-top: 16px;
+  fill: var(--social-icon-color);
+  justify-content: space-around;
+}
+
+.social-media:hover,
+.social-media:focus {
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--thirt-color);
+  background-color: var(--span-logo-color);
+  border-radius: 50px;
+}
+
+.social-media {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+}
+
+.our-clients {
+  color: var(--primary-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding-bottom: 50px;
+}
+
+.our-client-logo {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.logo-boxes {
+  border: 1px solid #afb1bb;
+  border-radius: 3px;
+  width: 170px;
+  height: 92px;
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-boxes:hover {
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--span-logo-color);
+
+}
+
+.logo-boxes:hover .client-icon,
+.logo-boxes:focus .client-icon {
+ transition-property: background-color, color, box-shadow;
+ transition-duration: 250ms;
+ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--span-logo-color);
+}
+
+.client-icon {
+  fill: var(--social-icon-color);
+}
+
+.footer {
+  background-color: var(--dark-background-color);
+  padding: 60px 0px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  margin: 0px auto;
+}
+
+.link-footer-logo {
+  color: var(--thirt-color);
+  font-family: var(--logo-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+.footer-details {
+  list-style: none;
+}
+
+.logo-first {
+  color: var(--span-logo-color);
+}
+
+.location {
+  font-style: normal;
+  color: var(--thirt-color);
+}
+
+.footer-contact-item + .footer-contact-item {
+  padding-top: 9px;
+}
+
+.link-footer {
+  color: #ffffff99;
+  text-decoration: none;
+}
+
+.social-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--thirt-color);
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 11px 0px;
+}
+
+.footer-social-icons {
+  margin-left: 70px;
+  padding-bottom: 72px;
+}
+
+.social-list {
+  list-style: none;
+  width: 206px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-icon {
+  fill: var(--thirt-color);
+}
+
+.div-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 12px;
+}
+
+.div-icon:hover,
+.div-icon:focus {
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ background-color: var(--span-logo-color);
+}
+
+
+
+/* portfolio website  buttons section as header is the same*/
+
+.list-button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.filter-button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.button-header {
+  /*buttons in main section */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.62;
+  background-color: var(
+    --second-background-color
+  );
+  text-align: center;
+  letter-spacing: 0.03em;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px 6px 22px;
+}
+
+.button-header:focus,  /*button pseudoclasses */
+.button-header:hover,
+.button-header:active {
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--thirt-color);
+  background-color: var(--span-logo-color);
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+
+.filter-button,
+.image-card {
+  list-style: none;
+}
+
+/* filter cards -overlay effect*/
+
+.image-card {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0%;
+  gap: 30px;
+  list-style: none;
+}
+
+.image-list {   /* all filter cards*/
+  max-width: 370px;
+  max-height: 404px;
+  border-left: 1px solid var(--forth-color);
+  border-bottom: 1px solid var(--forth-color);
+  border-right: 1px solid var(--forth-color);
+  flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+.image-list:hover,
+.image-list:focus {
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card-overlay {
+  position: relative;
+  overflow: hidden;
+ }
+
+
+.card-overlay-paragraph {
+  font-weight: 400;
+  font-size: 18px;
+  line-height:1.55;
+  position: absolute;
+  color: #ffffff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 49px 45px 49px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translatey(100%);
+}
+
+.image-list:hover .card-overlay-paragraph,
+.image-list:focus .card-overlay-paragraph  {
+ transform: translatey(0);
+
+}
+
+.image-list-name {
+  font-size: 18px;
+  margin-bottom: 4px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.image-list-content {
+  padding: 20px 24px;
+}
+
+.image-list-description {
+  color: var(--secondary-color);
+  font-size: 16px;
+  line-height: 1.875;
+  display: flex;
+}
+
+.social-list,
+.our-client-logo,
+.team-card-icons,
+.menu-icon,
+.image-list {
+  cursor: pointer;
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+width: 528px;
+height: 581px;
+background-color: var(--thirt-color);
+border-radius: 4px;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+position: fixed;
+top: 50%;
+left: 50%;
+opacity: 1;
+z-index: 1;
+transition-duration: 1s;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transform: translate(-50%, -50%);
+}
+
+.button-close {
+width: 30px;
+height: 30px;
+top: 8px;
+right: 8px;
+background: var(--thirt-color);
+border: 1px solid rgba(0, 0, 0, 0.1);
+position: absolute;
+border-radius: 50px;
+cursor: pointer;
+}
+
+.modal-icon {
+fill: #000000;
+}
+
+.main-headline-button {
+  /* main button zamow usługe*/
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  width: 200px;
+  height: 50px;
+  background-color: var(--span-logo-color);
+  color: var(--thirt-color);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+
