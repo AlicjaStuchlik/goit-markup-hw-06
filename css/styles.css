@@ -906,6 +906,14 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
 }
 
+.textarea-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
 .form-button {
   width: 200px;
   height: 50px;
