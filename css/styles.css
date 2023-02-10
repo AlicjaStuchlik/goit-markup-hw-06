@@ -172,7 +172,7 @@ body {
   margin: auto;
 }
 
-.main-headline-item {
+.main-headline__item {
   font-size: 44px;
   font-weight: 900;
   line-height: 1.36;
@@ -757,7 +757,7 @@ body {
   display: flex;
 }
 
-.main-headline-button {
+.main-headline__button {
   /* main button zamow usługe*/
   font-size: 16px;
   font-weight: 700;
