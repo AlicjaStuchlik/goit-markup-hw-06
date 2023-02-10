@@ -51,26 +51,30 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.header .nav-container,
-.navigation {
+.header__inner,
+.header__inner__navigation {
   display: flex;
   height: 80px;
   justify-content: space-between;
   align-items: center;
 }
 
-.header-menu {
+.header__inner__navigation__logo__first {
+  color: var(--span-logo-color);
+}
+
+.header__inner__navigation__list {
   display: flex;
   align-items: center;
 }
 
-.header-link,  /* header menu */
-.contact-link,
-.header-logo {
+.header__inner__navigation__list__item__link,  /* header menu */
+.header__inner__contact-list__item__contact-link,
+.header__inner__navigation__logo {
   text-decoration: none;
 }
 
-.is-active:after {
+.header__inner__navigation__list__item__link--is-active:after {
   content: '';
   width: 53px;
   height: 4px;
@@ -81,29 +85,28 @@ body {
   top: 76px;
 }
 
-.header-menu
-  > .header-menu-item:not(:last-child) {
+.header__inner__navigation__list
+  > .header__inner__navigation__list__item:not(:last-child) {
   margin-right: 40px;
 }
 
-.contact-list
-  > .header-contact-list:not(:last-child) {
+ .header__inner__contact-list__item:not(:last-child) {
   margin-right: 40px;
 }
 
-.contact-list {
+.header__inner__contact-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0px;
 }
 
-.header-menu-item,  /* contact list in header with no bulletpoint */
- .header-contact-list {
+.header__inner__navigation__list__item,  /* contact list in header with no bulletpoint */
+ .header__inner__contact-list__item {
   list-style: none;
 }
 
-.header-logo {
+.header__inner__navigation__logo {
   font-family: var(--logo-font);
   font-size: 26px;
   font-weight: 700;
@@ -113,19 +116,18 @@ body {
   color: var(--logo-studio-color);
 }
 
-.logo-first {
+.header__inner__navigation__logo {
   /*logo webstudio first blue part */
-  color: var(--span-logo-color);
   margin-top: 24px;
   margin-bottom: 20px;
 }
 
-.header-link:hover,
-.header-link:focus {
+.header__inner__navigation__list__item__link:hover,
+.header__inner__navigation__list__item__link:focus {
   color: #2196f3;
 }
 
-.header-link {
+.header__inner__navigation__list__item__link {
   /* header link to agencja portfolio kontakt */
   font-weight: 500;
   line-height: 1.17;
@@ -133,20 +135,20 @@ body {
   text-transform: capitalize;
 }
 
-.contact-link {
+.header__inner__contact-list__item__contact-link {
   color: var(--secondary-color);
   fill: var(--secondary-color);
   font-weight: 500;
   line-height: 1.17;
 }
 
-.contact-link:hover,
-.contact-link:focus {
+.header__inner__contact-list__item__contact-link:hover,
+.header__inner__contact-list__item__contact-link:focus {
   color: var(--span-logo-color);
   fill: var(--span-logo-color);
 }
 
-.menu-icon {
+.header__inner__contact-list__item__contact-link__icon {
   margin-right: 5px;
 }
 
@@ -307,7 +309,7 @@ body {
 
 .our-team-name,
 .our-team-description {
-display: block;
+  display: block;
 }
 
 .our-team-description {
@@ -435,10 +437,6 @@ display: block;
 
 .footer-details {
   list-style: none;
-}
-
-.logo-first {
-  color: var(--span-logo-color);
 }
 
 .location {
@@ -695,7 +693,7 @@ display: block;
 .social-list,
 .our-client-logo,
 .team-card-icons,
-.menu-icon,
+.header__inner__contact-list__item__contact-link__icon,
 .image-list {
   cursor: pointer;
 }
@@ -738,7 +736,6 @@ display: block;
   );
   transform: translate(-50%, -50%);
 }
-
 
 .button-close {
   width: 30px;
@@ -817,7 +814,7 @@ display: block;
   height: 40px;
   padding-left: 40px;
   display: block;
-  outline:none
+  outline: none;
 }
 
 .textarea-input {
@@ -832,7 +829,7 @@ display: block;
   border: 1px solid rgba(33, 33, 33, 0.2);
   padding: 12px 16px;
   width: 100%;
-  outline:none
+  outline: none;
 }
 
 .textarea-input:hover,
@@ -840,7 +837,7 @@ display: block;
 .textarea-input:active {
   border: 1px solid var(--span-logo-color);
   transition: border 250ms
-  cubic-bezier(0.4, 0, 0.2, 1);
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-icon {
@@ -848,7 +845,7 @@ display: block;
   top: 20px;
   margin: 11px 12px;
   transition: border 250ms
-  cubic-bezier(0.4, 0, 0.2, 1);
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-list-items:hover,
@@ -885,10 +882,14 @@ display: block;
 
 .checkbox-link:hover,
 .checkbox-link:focus {
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(
+    0.4,
+    0,
+    0.2,
+    1
+  );
 }
-
 
 .checkbox-rules {
   font-size: 14px;
@@ -901,7 +902,6 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   align-items: center;
   cursor: pointer;
 }
-
 
 .checkbox-rules::before {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='15' fill='none'%3E%3Cpath fill='%23212121' d='M14.222 1.667v11.666H1.778V1.667h12.444Zm0-1.667H1.778C.8 0 0 .75 0 1.667v11.666C0 14.25.8 15 1.778 15h12.444C15.2 15 16 14.25 16 13.333V1.667C16 .75 15.2 0 14.222 0Z'/%3E%3C/svg%3E");
@@ -943,6 +943,11 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 .form-button:hover,
 .form-button:focus {
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(
+    0.4,
+    0,
+    0.2,
+    1
+  );
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
