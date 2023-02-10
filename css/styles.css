@@ -52,29 +52,29 @@ body {
 }
 
 .header__inner,
-.header__inner__navigation {
+.nav {
   display: flex;
   height: 80px;
   justify-content: space-between;
   align-items: center;
 }
 
-.header__inner__navigation__logo__first {
+.logo__first {
   color: var(--span-logo-color);
 }
 
-.header__inner__navigation__list {
+.nav__list {
   display: flex;
   align-items: center;
 }
 
-.header__inner__navigation__list__item__link,  /* header menu */
-.header__inner__contact-list__item__contact-link,
-.header__inner__navigation__logo {
+.nav__link,  /* header menu */
+.header__contact-link,
+.logo {
   text-decoration: none;
 }
 
-.header__inner__navigation__list__item__link--is-active:after {
+.nav__link--is-active:after {
   content: '';
   width: 53px;
   height: 4px;
@@ -85,28 +85,27 @@ body {
   top: 76px;
 }
 
-.header__inner__navigation__list
-  > .header__inner__navigation__list__item:not(:last-child) {
+ .nav__item:not(:last-child) {
   margin-right: 40px;
 }
 
- .header__inner__contact-list__item:not(:last-child) {
+ .header__contact-item:not(:last-child) {
   margin-right: 40px;
 }
 
-.header__inner__contact-list {
+.header__contact-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0px;
 }
 
-.header__inner__navigation__list__item,  /* contact list in header with no bulletpoint */
- .header__inner__contact-list__item {
+.nav__item,  /* contact list in header with no bulletpoint */
+ .header__contact-item {
   list-style: none;
 }
 
-.header__inner__navigation__logo {
+.logo {
   font-family: var(--logo-font);
   font-size: 26px;
   font-weight: 700;
@@ -116,18 +115,18 @@ body {
   color: var(--logo-studio-color);
 }
 
-.header__inner__navigation__logo {
+.logo {
   /*logo webstudio first blue part */
   margin-top: 24px;
   margin-bottom: 20px;
 }
 
-.header__inner__navigation__list__item__link:hover,
-.header__inner__navigation__list__item__link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: #2196f3;
 }
 
-.header__inner__navigation__list__item__link {
+.nav__link {
   /* header link to agencja portfolio kontakt */
   font-weight: 500;
   line-height: 1.17;
@@ -135,20 +134,20 @@ body {
   text-transform: capitalize;
 }
 
-.header__inner__contact-list__item__contact-link {
+.header__contact-link {
   color: var(--secondary-color);
   fill: var(--secondary-color);
   font-weight: 500;
   line-height: 1.17;
 }
 
-.header__inner__contact-list__item__contact-link:hover,
-.header__inner__contact-list__item__contact-link:focus {
+.header__contact-link:hover,
+.header__contact-link:focus {
   color: var(--span-logo-color);
   fill: var(--span-logo-color);
 }
 
-.header__inner__contact-list__item__contact-link__icon {
+.header__contact-icon {
   margin-right: 5px;
 }
 
@@ -693,7 +692,7 @@ body {
 .social-list,
 .our-client-logo,
 .team-card-icons,
-.header__inner__contact-list__item__contact-link__icon,
+.header__contact-icon,
 .image-list {
   cursor: pointer;
 }
